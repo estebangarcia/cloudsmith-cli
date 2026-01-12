@@ -27,7 +27,7 @@ jobs:
             - name: Create multi-arch PEX executable
               run: |
                 pex . \
-                    --output-file cloudsmith-${{ steps.calc_version.outputs.rc_version }}.pyz \
+                    --output-file cloudsmith-${{ env.VERSION }}.pyz \
                     --console-script cloudsmith \
                     --python-shebang "/usr/bin/env python3.10" \
                     --venv \
